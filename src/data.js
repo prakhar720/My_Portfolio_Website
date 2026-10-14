@@ -115,11 +115,55 @@ export const projects = [
     status: [['Honest limits', 'This is blockchain-inspired, not a blockchain. Hashes are computed in the browser and stored in Firebase, so a user with database access could rewrite the chain. True immutability would need server-side hashing, security rules and external anchoring.'], ['Next steps', 'Move hashing server-side, add Firestore security rules, anchor hashes to a public ledger, and add an independent chain-verification page.']],
     links: [['Open live site', 'https://carbontrack-gamma.vercel.app/'], ['View source on GitHub', 'https://github.com/prakhar720/CarbonTrack-Project']],
   },
+  {
+    slug: 'zepto', title: 'Zepto | Market Research, Competitors and User Journey',
+    short: 'Why is quick commerce hard to run profitably outside the metros? Market sizing, a competitor teardown, a journey map and a persona, ending in three feature ideas.',
+    tags: ['Product Strategy', 'UX'], labels: ['Market research', 'Competitor analysis', 'User journey', 'Persona'],
+    kind: 'Research and UX case study', context: 'Presented by Prakhar Agrawal', team: null,
+    deck: 'zepto', pages: 7, cover: 'zepto-1', pdf: '/decks/zepto.pdf',
+    sections: [
+      ['Question and hypothesis', ['Why does Zepto\'s dark-store model struggle to scale profitably in Tier 2 and Tier 3 cities despite growing quick-commerce demand?', 'Hypothesis: it is a unit-economics problem. Dark stores need a minimum order density to break even, which smaller cities cannot yet sustain.']],
+      ['Research', ['Secondary and primary research questions on order density, break-even order counts, share against Blinkit and Instamart, and why users switch apps.', 'Pain points drawn from Play Store and Reddit reviews cited in the deck: promised 8-13 minute delivery arriving in 25-40 minutes, the minimum cart value rising from Rs 99 to Rs 250, and missing items with email-only support.']],
+      ['Competitors, SWOT and market sizing', ['Competitor table covering Zepto, Blinkit, Swiggy Instamart, BigBasket Now and kirana stores on share, dark stores, delivery speed, minimum order value, Tier 2/3 presence and daily orders, followed by a SWOT.', 'Market sizing, top-down and bottom-up: TAM $6.78B, SAM $2.4B, SOM about $500M; bottom-up from Rs 450 average order value and 3 lakh daily orders, giving roughly Rs 4,860 Cr annual GMV.']],
+      ['User journey and persona', ['An eight-stage journey from home screen to delivery received, with goals, actions, pain points, emotions and opportunities at each stage.', 'Persona: Priya Sharma, 27, a software engineer in Bengaluru who orders 3-4 times a week, values speed over price and switches to Blinkit when the ETA looks high.']],
+      ['Ideas proposed', ['Zepto FlexPass: a small paid pass for minimum-order-free orders.', 'Smart Refill Alerts: predict what is running out and allow one-tap reorder.', 'Instant Wallet Credit: automatic credit within minutes for missing or damaged items.']],
+    ],
+    status: [['Sources', 'Market figures come from the secondary sources cited on the slides (industry blogs and reports, app reviews). They have not been independently verified.'], ['Proposal', 'The persona and journey are an illustrative framing, not a validated research study. The feature ideas, including the Rs 49 FlexPass price, are untested proposals, and nothing here was implemented by Zepto.']],
+    links: [],
+  },
+  {
+    slug: 'spotify-frameworks', title: 'Spotify | CIRCLES, AARRR and HEART in Practice',
+    short: 'Three product frameworks applied to one product: a study-session feature for UPSC aspirants, a growth funnel with RICE scoring, and success metrics for Wrapped.',
+    tags: ['Product Strategy', 'UX'], labels: ['CIRCLES', 'AARRR', 'HEART'],
+    kind: 'Product frameworks exercise', context: 'Product Management Club, IIT (ISM) Dhanbad', team: null,
+    deck: 'task3', pages: 14, cover: 'task3-01', pdf: '/decks/task3.pdf',
+    sections: [
+      ['Part 1: CIRCLES', ['Prompt: design a feature for Spotify for students preparing for competitive exams. The deck keeps Spotify audio-first, reuses its existing recommendation infrastructure and avoids turning it into an EdTech product.', 'Chosen segment: full-time UPSC aspirants, for their long listening windows and existing lo-fi habits. Pain points: recommendation drift breaking focus, no signal of study intent, long sessions needing manual restarts, and ads interrupting deep work.']],
+      ['Part 2: AARRR', ['Funnel stages (acquisition, activation, retention, revenue, referral) each with a key metric, a bottleneck and candidate features scored with RICE; for example One-Tap Free Trial Activation scored 19.2.']],
+      ['Part 3: HEART', ['HEART metrics (Goal, Signal, Metric) used to judge whether Spotify Wrapped is successful.']],
+    ],
+    status: [['Scope', 'A framework exercise using public information about Spotify, not work done with Spotify. Scores and metrics are the assignment\'s own estimates, not Spotify data.']],
+    links: [],
+  },
+  {
+    slug: 'fitcampus-gtm', title: 'FitCampus | Go-to-Market for a Student Gym App',
+    short: 'A go-to-market plan for a gym and habit tracker built around a student\'s routine: ICP, market sizing, channels, AARRR metrics and a three-phase launch.',
+    tags: ['Product Strategy'], labels: ['Go-to-market', 'Personas', 'AARRR'],
+    kind: 'Go-to-market concept', context: 'Hypothetical product, no app was built', team: null,
+    deck: 'task4', pages: 1, cover: 'task4-1', pdf: '/decks/task4.pdf', scroll: true,
+    sections: [
+      ['Product and customer', ['FitCampus is a concept for college students aged 18-24: smart gym slot booking, a lifestyle and progress tracker, and instant workout-partner matching. Two personas, Aman (2nd-year B.Tech) and Shivani (fitness beginner), get different key messages.']],
+      ['Market sizing', ['TAM about 40M+ college students interested in fitness, SAM about 4M+ hostel students using campus gyms, and SOM about 20K across an initial 8-10 campuses (about 2,000-2,500 reachable students each).']],
+      ['Go-to-market plan', ['Channels: Instagram Reels, campus ambassadors, fests, gym QR posters, student influencers and demo booths, plus a referral programme.', 'Three phases: pre-launch (3 weeks, waitlist signups), launch week (target 2,000 installs and 500 bookings) and post-launch (weeks 2-8, target 40% active at day 30), with AARRR metrics for each stage.']],
+    ],
+    status: [['Concept', 'FitCampus is a hypothetical product and no app was built. Market sizes are top-down estimates and all KPIs are targets, not results.']],
+    links: [],
+  },
 ]
 
 export const experience = {
   org: 'WorldQuant BRAIN', role: 'Research Consultant', dates: 'May 2026 to present',
-  points: ['Designed and iterated alpha factors, evaluating performance, robustness, correlation and risk metrics.', 'Analyzed strategy performance and adjusted models based on simulation results to improve diversification and reduce self-correlation.'],
+  points: ['Designed and iterated alpha factors, evaluating performance, robustness, correlation and risk metrics.', 'Refined strategies based on simulation results to improve diversification and reduce self-correlation.'],
 }
 
 export const achievements = [

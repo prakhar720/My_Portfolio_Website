@@ -70,7 +70,7 @@ function Work() {
 function Viewer({ p }) {
   const [i, setI] = useState(1)
   const n = p.pages
-  const name = (k) => (n === 1 ? `${p.deck}-1` : `${p.deck}-${String(k).padStart(2, '0')}`)
+  const name = (k) => (n === 1 ? `${p.deck}-1` : `${p.deck}-${String(k).padStart(String(n).length, '0')}`)
   const move = useCallback((d) => setI((v) => Math.min(n, Math.max(1, v + d))), [n])
   useEffect(() => { const f = (e) => { if (e.key === 'ArrowRight') move(1); if (e.key === 'ArrowLeft') move(-1) }; addEventListener('keydown', f); return () => removeEventListener('keydown', f) }, [move])
   return (<div className="viewer"><div className={p.scroll ? 'vimg scroll' : 'vimg'}><img src={`/slides/${name(i)}.jpg`} alt={`${p.title}, slide ${i} of ${n}`} /></div>
